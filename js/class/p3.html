@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+</body>
+<script>
+    // key:value   OBJECT_NAME.SIZE="2" OBJECT_NAME.PRICE="200" OBJECT_NAME.NAME="ITALIAN"
+    //  ITALIAN_PIZZA {SIZE: "MEDIUM", PRICE: 200, TYPE: "CHEESE_BURST",RATING:5}
+    //  MEXICAN_PIZZA {SIZE: "MEDIUM", PRICE: 400, TYPE: "VOLCANO",RATING:2}
+    //  AMERICAN_PIZZA {SIZE: "MEDIUM", PRICE: 600, TYPE: "DOUBLE_CHEESE",RATING:7}
+
+    // model 
+    class Pizza{
+     constructor(size,price,type,rating){
+        this.size=size;
+        this.price=price;
+        this.type=type;
+        this.rating=rating;
+     }
+    } 
+
+    italian=new Pizza("MEDIUM",200, "CHEESE_BURST",5) 
+    console.log(italian)
+    mexican=new Pizza("LARGE",500, "DOUBLE_CHEESE",2) 
+    console.log(mexican)
+    american=new Pizza("MEDIUM",200, "VOLCANO",7) 
+    console.log(american.type)
+    
+</script>
+</html>

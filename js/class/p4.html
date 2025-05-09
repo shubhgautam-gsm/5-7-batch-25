@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Login Example</title>
+</head>
+<body>
+  <h2>User Info</h2>
+  <p id="userInfo">Not logged in</p>
+  <button onclick="user1.login()">Login</button>
+  <button onclick="user1.logout()">Logout</button>
+
+  <script>
+    // JS class to model a user
+    class User {
+      constructor(name, email) {
+        this.name = name;
+        this.email = email;
+        this.loggedIn = false;
+      }
+
+      login() {
+        this.loggedIn = true;
+        //overide
+        document.getElementById('userInfo').innerText =
+          `${this.name} is logged in with email: ${this.email}`;
+      }
+
+      logout() {
+        this.loggedIn = false;
+        document.getElementById('userInfo').innerText = 'User logged out';
+      }
+    }
+
+    // Create a user instance  User(model)
+    const user1 = new User("Alice", "alice@example.com");
+  </script>
+</body>
+</html>
