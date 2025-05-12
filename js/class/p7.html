@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Class Method</h1>
+<p>Pass a parameter into the "age()" method.</p>
+
+<p id="demo"></p>
+
+<script>
+movie=['RRR','BHOOTNI','RAID2']
+const sub = new Date('2025-05-03');
+const date= new Date();
+
+let subscribe_month = sub.getMonth();
+let current_month = date.getMonth();
+let subscribe_date = sub.getDate();
+let current_date = date.getDate();
+let premium_month=current_month-subscribe_month
+let premium_date=subscribe_date-current_date
+console.log(premium_month)
+console.log(premium_date)
+if(premium_month<1 && premium_date>=30){
+// api   /sub   (/sub,subscribe.html) (form)   
+document.getElementById("demo").innerHTML=movie[1]
+}
+else{
+// api /movies    (/movies,movies_all.html)
+document.getElementById("demo").innerHTML='SUBSCRIBE FOR WATCH MOVIES'
+}
+</script>
+</body>
+</html>
+
+
