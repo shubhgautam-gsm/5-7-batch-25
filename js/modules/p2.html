@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Modules</title>
+</head>
+<body>
+
+<div class="">
+  <h1>JavaScript Modules</h1>
+
+  <input type="number" id="num1" class="" placeholder="Enter a number">
+  <input type="number" id="num2" class="" placeholder="Enter a number">
+  <button onclick="showSquare()" class="">Show Square</button>
+
+  <p id="demo" ></p>
+</div>
+
+<script type="module">
+  import { sqr,div,add } from './Maths.js';
+
+function showSquare () {
+    const result = sqr(); // gets value from num1 internally
+    document.getElementById("demo").innerHTML = "Square is: " + result;
+    console.log(result)
+  }
+
+  showSquare()
+</script>
+
+</body>
+</html>

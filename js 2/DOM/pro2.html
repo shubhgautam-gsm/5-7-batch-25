@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="demo">Welcome to JS</h1>
+    <button onclick="changeData()">Change Data</button>
+</body>
+</html>
+
+<script>
+    let x= document.getElementById("demo");
+    
+
+    function changeData(){
+        alert("Current Data is "+x.innerHTML); // get
+        x.style.color = 'white'; // set
+        x.style.backgroundColor = 'black'; // set
+
+        x.innerHTML = new Date(); // set
+    }
+</script>
